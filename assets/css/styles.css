@@ -22,14 +22,16 @@ html,body{
     height: 100%; 
   }
 .header{
-    position: static;
+    display: flex;
+    flex-direction: row;
     background-color: #ffffff;
-    text-align: center;
+  
+}
+.header > div{
+   
     width: 100%;
     height: 70px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-left: 2px;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;  
 }
 #Your-name{
     background-color: teal;
@@ -38,10 +40,14 @@ html,body{
     height: 30px;
     padding: 20px 20px 20px 20px ;
     margin-left: 220px;
+    margin-right: 515px;
     color: #ffffff;
     font-size: 20px;
     font-weight: bold;
     float: left;   
+}
+.nav-links {
+    margin-right: 16%;
 }
 #Contact-header{
     border-right-style: solid 1px black;
@@ -67,12 +73,10 @@ html,body{
     width: 80px;
     height: 10px;
     margin-top: 31px;
-    padding: 6px 5px 9px 11px  ;
+    padding: 6px 5px 9px 10px  ;
     float: right;
 }
-.nav-links {
-    margin-right: 245px;
-}
+
 #Portfolio{
     border-right-style: solid 1px black;
     color: #777777;
@@ -84,7 +88,7 @@ html,body{
     width: 80px;
     height: 10px;
     margin-top: 31px;
-    padding: 6px 6px 9px 12px ;
+    padding: 6px 6px 9px 15px ;
     float: right;
 }
 #Contact{
@@ -102,7 +106,6 @@ html,body{
     width:100%;  
     height: 1015px;
     border: solid 0.5px #cccccc;
- 
     margin-left: 2px;
     margin-right: 2px;   
 }
@@ -110,14 +113,13 @@ html,body{
 /* <!----styling index.html ----->*/
 .content-index{
     clear: both;
-    width: 960px;
-    height: 420px;
+    width: 66%;
+    height: 45%;
     border: 1px solid #dddddd;
     background-color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 30px; 
     margin-left: 220px;
-   /* margin-bottom: 533px;*/
     line-height: 100%;
 }
 
@@ -152,8 +154,8 @@ html,body{
     position:relative;
     left: 220px;
     right: 200px;
-    width: 960px;
-    height: 420px;
+    width: 66%;
+    height: 45%;
     border: 1px solid #dddddd;
     background-color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
@@ -177,8 +179,8 @@ input[type=text], select {
   
 }
 #message{
-    width: 920px;
-    height:120px;
+    width: 60%;
+    height:40%;
 }
 #Contact:hover{
     background-color: azure;
@@ -284,19 +286,21 @@ input[type=submit]:active{
         height: auto;
         width:100%;
     }
-    /*
-    .header{
-        width: 100%;
-        margin-left: -195px;
-    }*/
-    .content-contact, .content-portfolio{
-        width: 80%;
-        margin-left: -200px;
+    #Your-name{
+        margin-left: 30px;
     }
     .content-index{
         max-width: 80%;
         margin-left: 30px;
         height: 80%;
+    }
+    .content-contact, .content-portfolio{
+        width: 60%;
+        height: 70%;
+        position: relative;
+        left: 30px;
+        top: 0px;
+        margin-bottom: 50%;
     }
     
     /* Styling for font awesome */
@@ -325,18 +329,20 @@ input[type=submit]:active{
         height: auto;
         max-width: 768px;
     }
-    .header{
-        width: 100%;
-        margin-left: -100px;
-    }
-    .content-contact, .content-portfolio{
-        width: 90%;
-        margin-left: -200px;
+    #Your-name{
+        margin-left: 30px;
     }
     .content-index{
-        max-width: 90%;
+        max-width: 80%;
         margin-left: 30px;
-        height: auto;
+        height: 80%;
+    }
+    .content-contact, .content-portfolio{
+        width: 60%;
+        height: 70%;
+        position: relative;
+        left: 30px;
+        margin-bottom: 50%;
     }
     /* Styling for font awesome */
     .fa-user:before {
@@ -364,21 +370,51 @@ input[type=submit]:active{
     }
     .container {
         height: auto;
-        max-width: 768px;
+        max-width: 640px;
     }
     .header{
-        width: 90%;
-        margin-left: -200px;
-    }
-    .content-contact, .content-portfolio{
-        width: 90%;
-        margin-left: -200px;
-    }
-    .content-index{
-        max-width: 90%;
-        margin-left: 30px;
+        width: 150%;
+        flex-direction: column;
+        margin: 0;
         height: auto;
     }
+    .nav-links{
+        width: 100%;
+        height: 70px;
+    }
+    #Your-name{
+        
+        width: 90%;
+        justify-content: center;
+        text-align: center;  
+        margin-left: 0;
+    }
+    .content-index{
+        clear: both;
+        max-width: 80%;
+        margin-left: 30px;
+        height: 80%;
+    }
+    .content-contact{
+        clear: both;
+        width: 90%;
+        height: 50%;
+        position: relative;
+        margin-top: 2%;
+        margin-bottom: 50%;
+    }
+    .content-portfolio{
+        clear: both;
+        width: 60%;
+        height: 70%;
+        position: relative;
+        left: 30px;
+        margin-bottom: 50%;
+    }
+    .header{
+        width: 60%;
+    }
+    
     /* Styling for font awesome */
     .fa-user:before {
         content: "\f007";
