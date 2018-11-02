@@ -381,33 +381,33 @@ input[type=submit]:active{
 /*<--- screen width 640 px. -->*/
 @media only screen and (max-width: 640px) {
     .wrapper{
-        width: 100%;
+        width: 90%;
         padding: 20px;
     }
     .container {
         height: auto;
-        max-width: 640px;
+        max-width: 100%;
     }
     .header{
-        width: 150%;
+        width: 90%;
         flex-direction: column;
         margin: 0;
         height: auto;
     }
     .nav-links{
         width: 100%; /* */
-        height: 70px;
-    }
-    #Your-name{ 
-        width: 90%;
         justify-content: center;
         text-align: center;  
-      
+        margin-right: 0%;
+    }
+    #Your-name{ 
+        width: 100%;
+        justify-content: center;
+        text-align: center;    
     }
     .content-index{
         clear: both;
         max-width: 90%;
-  
         height: 80%;
     }
     .content-contact{
@@ -420,16 +420,13 @@ input[type=submit]:active{
     }
     .content-portfolio{
         clear: both;
-        width: 60%;
+        width: 90%;
         height: 70%;
         position: relative;
         left: 30px;
         margin-bottom: 50%;
     }
-    .header{
-        width: 60%;
-    }
-    
+   
     /* Styling for font awesome */
     .fa-user:before {
         content: "\f007";
